@@ -10,13 +10,45 @@ namespace GeometriskaFigurer
     {
         private static Shape CreateShape(ShapeType shapeType)
         {
-            Console.Write("Ange längden: ");
-            double length = double.Parse(Console.ReadLine());
-            Console.Write("Ange bredden: ");
-            double width = double.Parse(Console.ReadLine());
+            double langd;
+            double bredd;
+            string Langd = "Ange längden: ";
+            string Bredd = "Ange bredden: ";
+            Console.Write(Langd);
+            langd = double.Parse(Console.ReadLine());
+            if (langd < 0) 
+            {
+                ReadDoubleGreaterThanZero(Langd);
+            }
+            Console.Write(Bredd);
+            bredd = double.Parse(Console.ReadLine());
+            if (bredd < 0) 
+            {
+                ReadDoubleGreaterThanZero(Bredd);
+            }
+            if (shapeType == 0) 
+            {
+                return Shape;
+            }
+            
         }
         private static double ReadDoubleGreaterThanZero(string prompt)
         {
+            do
+            {
+                double index;
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("FEL! Ange ett flyttal större än 0.");
+                Console.ResetColor();
+                Console.WriteLine();
+                Console.Write(prompt);
+                if (double.TryParse(Console.ReadLine(), out index) && index > 0)
+                {
+                    return index;
+                }
+                
+            } while (true);           
         }
         private static void ViewMenu()
         {
@@ -47,8 +79,7 @@ namespace GeometriskaFigurer
             Console.WriteLine();
             shape.ToString();
             Console.WriteLine();
-            Console.WriteLine("=======================================");
-            
+            Console.WriteLine("=======================================");        
         }
         static void Main(string[] args)
         {

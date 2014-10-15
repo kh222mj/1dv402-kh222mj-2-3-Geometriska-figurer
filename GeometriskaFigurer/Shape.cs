@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometriskaFigurer
 {
-    public enum ShapeType { Obestamd, Rectangle, Ellipse };
+    public enum ShapeType { Rectangle, Ellipse };
     class Shape
     {
         private double _length;

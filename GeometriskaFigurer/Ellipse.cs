@@ -8,7 +8,7 @@ namespace GeometriskaFigurer
 {
     class Ellipse : Shape
     {
-        public double Area
+        public abstract double Area
         {
             get { return Area; }
             set 
@@ -20,7 +20,7 @@ namespace GeometriskaFigurer
                 Area = Math.PI * a * b;
             }
         }
-        public double Perimeter
+        public abstract double Perimeter
         {
             get { return Perimeter; }
             set 

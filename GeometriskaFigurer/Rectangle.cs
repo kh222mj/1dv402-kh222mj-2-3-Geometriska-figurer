@@ -8,7 +8,7 @@ namespace GeometriskaFigurer
 {
     class Rectangle : Shape
     {
-        public double Area
+        public abstract double Area
         {
             get { return Area; }
             set
@@ -16,7 +16,7 @@ namespace GeometriskaFigurer
                 Area = Length * Width;
             }
         }
-        public double Perimeter
+        public abstract double Perimeter
         {
             get { return Perimeter;}
             set 
