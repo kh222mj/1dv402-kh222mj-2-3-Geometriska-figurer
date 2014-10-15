@@ -1,0 +1,2 @@
+c:\users\kim\documents\visual studio 2013\Projects\GeometriskaFigurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe.config
+c:\users\kim\documents\visual studio 2013\Projects\GeometriskaFigurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.csprojResolveAssemblyReference.cache
