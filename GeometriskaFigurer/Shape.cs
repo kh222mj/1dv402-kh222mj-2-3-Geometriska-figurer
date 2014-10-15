@@ -45,8 +45,8 @@ namespace GeometriskaFigurer
         }
         protected Shape(double length, double width)
         {
-            length = Length;
-            width = Width;
+            Length = length;
+            Width = width;
         }
         public override string ToString()
         {
