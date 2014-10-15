@@ -8,19 +8,10 @@ namespace GeometriskaFigurer
 {
     class Ellipse : Shape
     {
-        public abstract double Area
-        {
-            get { return Area; }
-            set 
-            {
-                double a;
-                double b;
-                a = Length / 2;
-                b = Width / 2;
-                Area = Math.PI * a * b;
-            }
-        }
-        public abstract double Perimeter
+        public double Area { get; }
+
+        
+        public double Perimeter
         {
             get { return Perimeter; }
             set 
@@ -35,6 +26,8 @@ namespace GeometriskaFigurer
         public Ellipse(double length, double width) 
             :base(length, width)
         {
+            Length = length;
+            Width = width;
         }
     }
 }

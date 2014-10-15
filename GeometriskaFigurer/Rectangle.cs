@@ -16,9 +16,9 @@ namespace GeometriskaFigurer
                 Area = Length * Width;
             }
         }
-        public abstract double Perimeter
+        public override double Perimeter
         {
-            get { return Perimeter;}
+            get { return Perimeter = 2 * Length + 2 * Width; }
             set 
             {
                 Perimeter = 2 * Length + 2 * Width;             
@@ -27,6 +27,8 @@ namespace GeometriskaFigurer
         public Rectangle(double length, double width) 
             :base(length, width)
         {
+            Length = length;
+            Width = width;
         }
     }
 }

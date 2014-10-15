@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace GeometriskaFigurer
 {
-    public enum ShapeType { Rectangle, Ellipse };
-    class Shape
+    public enum ShapeType { Avsluta, Rectangle, Ellipse };
+    abstract class Shape
     {
         private double _length;
         private double _width;
-        public abstract double Area 
-        {
-            get { return Area; }   
-        }
+        public abstract double Area { get; }
         public double Length
         {
             get { return _length; }
@@ -27,11 +24,9 @@ namespace GeometriskaFigurer
                 _length = value;
             }
         }
-        public abstract double Perimeter
-        {
-            get { return Perimeter; }
-        }
-        public abstract double Width
+        public abstract double Perimeter { get; }
+        
+        public double Width
         {
             get { return _width; }
             set
