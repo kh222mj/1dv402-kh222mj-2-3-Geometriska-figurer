@@ -3,3 +3,7 @@ c:\users\kim\documents\visual studio 2013\Projects\GeometriskaFigurer\Geometrisk
 P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe.config
 C:\git\projects\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe.config
 C:\git\projects\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.csprojResolveAssemblyReference.cache
+P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.exe
+P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.pdb
+P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.exe
+P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.pdb

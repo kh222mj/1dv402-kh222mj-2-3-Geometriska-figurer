@@ -9,20 +9,12 @@ namespace GeometriskaFigurer
     class Ellipse : Shape
     {
         public override double Area 
-        { get;
- 
+        {
+            get { return Math.PI * (Length / 2) * (Width / 2); }
         }
         public override double Perimeter
         {
-            get { return Perimeter; }
-            set 
-            {              
-                double a;
-                double b;
-                a = Length / 2;
-                b = Width / 2;
-                double perimeter = Math.PI * Math.Sqrt(2 * a * a + 2 * b * b);
-            }
+            get { return Math.PI * Math.Sqrt(2 * (Length / 2) * (Length / 2) + 2 * (Width / 2) * (Width / 2)); }
         }
         public Ellipse(double length, double width) 
             :base(length, width)

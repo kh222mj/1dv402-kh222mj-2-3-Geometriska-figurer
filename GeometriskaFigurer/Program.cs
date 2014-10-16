@@ -15,29 +15,28 @@ namespace GeometriskaFigurer
                case ShapeType.Ellipse:
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
                     Console.WriteLine("=======================================");
                     Console.WriteLine("=               Ellips                =");
                     Console.WriteLine("=======================================");
                     Console.ResetColor();
                     Console.WriteLine();
-                    Console.Write("Ange längden: ");
-                    double langdE = double.Parse(Console.ReadLine());
-                    Console.Write("Ange bredden: ");
-                    double breddE = double.Parse(Console.ReadLine());
+                    double langdE = ReadDoubleGreaterThanZero(" Ange längden: ");
+                    double breddE = ReadDoubleGreaterThanZero(" Ange bredden: ");
                     return new Ellipse(langdE, breddE);
                
                case ShapeType.Rectangle:
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
                     Console.WriteLine("=======================================");
                     Console.WriteLine("=              Rektangel              =");
                     Console.WriteLine("=======================================");
                     Console.ResetColor();
                     Console.WriteLine();
-                    Console.Write("Ange längden: ");
-                    double langdR = double.Parse(Console.ReadLine());
-                    Console.Write("Ange bredden: ");
-                    double breddR = double.Parse(Console.ReadLine());
+                    double langdR = ReadDoubleGreaterThanZero(" Ange längden: ");
+                    double breddR = ReadDoubleGreaterThanZero(" Ange bredden: ");                  
+                    Console.WriteLine();
                     return new Rectangle(langdR, breddR);
 
                 default:
@@ -48,18 +47,18 @@ namespace GeometriskaFigurer
         {
             do
             {
+                Console.Write(prompt); 
                 double index;
-                
                 if (double.TryParse(Console.ReadLine(), out index) && index > 0)
                 {
                     return index;
                 }
+                Console.WriteLine();
                 Console.BackgroundColor = ConsoleColor.Red;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("FEL! Ange ett flyttal större än 0.");
                 Console.ResetColor();
-                Console.WriteLine();
-                Console.Write(prompt);
+                Console.WriteLine();                        
             } while (true);           
         }
         private static void ViewMenu()
@@ -89,7 +88,7 @@ namespace GeometriskaFigurer
             Console.WriteLine("=======================================");
             Console.ResetColor();
             Console.WriteLine();
-            shape.ToString();
+            Console.WriteLine(shape.ToString());
             Console.WriteLine();
             Console.WriteLine("=======================================");
             Console.WriteLine();
@@ -103,32 +102,42 @@ namespace GeometriskaFigurer
         }
         static void Main(string[] args)
         {
-            int index;
-            do
+            while (true)
             {
-                Console.Clear();
-                ViewMenu();
-                if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index <= 2)
+                int index;               
+                do
                 {
-                    switch (index) 
+                    Console.Clear();
+                    ViewMenu();
+                    if (int.TryParse(Console.ReadLine(), out index) && index >= 0 && index <= 2)
                     {
-                        case 0:
-                            break;
-                        case 1:
-                            CreateShape(ShapeType.Rectangle);
-                            
-                            continue; 
-                        case 2:
-                            CreateShape(ShapeType.Rectangle);
-                            
-                            continue;
+                        break;
                     }
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(" FEL! Ange ett nummer mellan 0 och 2.");
+                    Console.ResetColor();
+                    Console.WriteLine();
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("   Tryck tangent för att fortsätta");
+                    Console.ResetColor();
+                    Console.ReadKey(true);
+                } while (true);
+                switch (index)
+                {
+                    case 0:                   
+                        return;
+                    case 1:
+                        Shape shapeElippse = CreateShape(ShapeType.Ellipse);
+                        ViewShapeDetail(shapeElippse);
+                        continue;
+                    case 2:
+                        Shape shapeRectangle = CreateShape(ShapeType.Rectangle);
+                        ViewShapeDetail(shapeRectangle);
+                        continue;
                 }
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("FEL! Ange ett nummer mellan 0 och 2.");
-                Console.ResetColor(); 
-            } while (true);            
+            }
         }
     }
 }

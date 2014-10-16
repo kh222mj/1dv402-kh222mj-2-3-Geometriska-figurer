@@ -45,12 +45,22 @@ namespace GeometriskaFigurer
         }
         public override string ToString()
         {
-            return String.Format
-            (@"Längd  : {0}"
-            + "Bredd  : {1}"
-            + "Omkrets: {2}"
-            + "Area   : {3}"
-            + Length + Width + Perimeter + Area);
+            StringBuilder sb = new StringBuilder();
+            sb.Append(" Längd    : ").AppendFormat("{0,10:00.00}", Length);
+            sb.AppendLine();
+            sb.Append(" Bredd    : ").AppendFormat("{0,10:00.00}", Width);
+            sb.AppendLine();
+            sb.Append(" Omkrets  : ").AppendFormat("{0,10:00.00}", Perimeter);
+            sb.AppendLine();
+            sb.Append(" Area     : ").AppendFormat("{0,10:00.00}", Area);
+            return sb.ToString();      
         }
     }
 }
+
+// return String.Format
+            //(@"Längd  : {0}"
+            //+ "Bredd  : {1}"
+            //+ "Omkrets: {2}"
+            //+ "Area   : {3}"
+            //+ Length + Width + Perimeter + Area);
