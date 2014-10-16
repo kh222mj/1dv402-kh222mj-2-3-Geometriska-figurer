@@ -116,11 +116,11 @@ namespace GeometriskaFigurer
                             break;
                         case 1:
                             CreateShape(ShapeType.Rectangle);
-                            ViewShapeDetail();
+                            
                             continue; 
                         case 2:
                             CreateShape(ShapeType.Rectangle);
-                            ViewShapeDetail();
+                            
                             continue;
                     }
                 }

@@ -8,19 +8,20 @@ namespace GeometriskaFigurer
 {
     class Ellipse : Shape
     {
-        public double Area { get; }
-
-        
-        public double Perimeter
+        public override double Area 
+        { get;
+ 
+        }
+        public override double Perimeter
         {
             get { return Perimeter; }
             set 
-            {
+            {              
                 double a;
                 double b;
                 a = Length / 2;
                 b = Width / 2;
-                Perimeter = Math.PI * Math.Sqrt(2 * a * a + 2 * b *  b);
+                double perimeter = Math.PI * Math.Sqrt(2 * a * a + 2 * b * b);
             }
         }
         public Ellipse(double length, double width) 
