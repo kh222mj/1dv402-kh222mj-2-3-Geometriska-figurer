@@ -7,3 +7,4 @@ P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\Geome
 P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\bin\Debug\GeometriskaFigurer.pdb
 P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.exe
 P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.pdb
+P:\git\1dv402-kh222mj-2-3-Geometriska-figurer\GeometriskaFigurer\obj\Debug\GeometriskaFigurer.csprojResolveAssemblyReference.cache
